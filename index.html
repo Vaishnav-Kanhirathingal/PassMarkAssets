@@ -7,19 +7,23 @@
         body {
             font-family: sans-serif;
             padding: 2rem;
-            text-align: center;
+            display: flex;
+            justify-content: center;
+            max-width: 1200px;
         }
 
         video {
-            width: 80%;
-            max-width: 800px;
-            margin-bottom: 1rem;
+            width: 100%;
+            height: auto;
+            min-width: 600px;
+            max-width: 1000px;
         }
 
         .timestamp {
             text-decoration: underline;
             cursor: pointer;
             margin: 0 0.5rem;
+            display: flex;
         }
 
         .container {
@@ -39,10 +43,10 @@
             padding: 8px;
         }
 
-        @media (min-width: 768px) {
+        @media (min-width: 1080px) {
             .container {
                 flex-direction: row;
-                align-items: flex-start;
+                align-items: center;
             }
 
             .table-wrapper {
@@ -52,13 +56,14 @@
 
             .video-wrapper {
                 flex: 1;
+                min-width: 500px;
+                max-width: 100%;
             }
         }
     </style>
 </head>
 
 <body>
-    <h1>Mmulti-theme demo</h1>
     <div class="container">
         <div class="table-wrapper">
             <table style="margin: auto; text-align: center;">
