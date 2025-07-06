@@ -17,93 +17,128 @@
         }
 
         .timestamp {
-            color: aqua;
             text-decoration: underline;
             cursor: pointer;
             margin: 0 0.5rem;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid #ccc;
+            padding: 8px;
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                flex-direction: row;
+                align-items: flex-start;
+            }
+
+            .table-wrapper {
+                max-width: 300px;
+                flex-shrink: 0;
+            }
+
+            .video-wrapper {
+                flex: 1;
+            }
         }
     </style>
 </head>
 
 <body>
-    <h1>Video with Jump Links</h1>
-
-    <video id="1400pHigh" controls>
-        <source src="assets/1400pHigh.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-
-    <table border="1" style="margin: auto; text-align: center;">
-        <thead>
-            <th>Time</th>
-            <th>Description</th>
-        </thead>
-        <tr>
-            <td><span class="timestamp" onclick="jumpTo(0)">00:00</span></td>
-            <td>Account Creation</td>
-        </tr>
-        <tr>
-            <td><span class="timestamp" onclick="jumpTo(16)">00:16</span></td>
-            <td>Vault Creation</td>
-        </tr>
-        <tr>
-            <td><span class="timestamp" onclick="jumpTo(24)">00:24</span></td>
-            <td>Vault Update</td>
-        </tr>
-        <tr>
-            <td><span class="timestamp" onclick="jumpTo(35)">00:35</span></td>
-            <td>Password Creation</td>
-        </tr>
-        <tr>
-            <td><span class="timestamp" onclick="jumpTo(53)">00:53</span></td>
-            <td>Edit Password</td>
-        </tr>
-        <tr>
-            <td><span class="timestamp" onclick="jumpTo(64)">01:04</span></td>
-            <td>View & Delete Password</td>
-        </tr>
-        <tr>
-            <td><span class="timestamp" onclick="jumpTo(79)">01:19</span></td>
-            <td>Delete Vault</td>
-        </tr>
-        <tr>
-            <td><span class="timestamp" onclick="jumpTo(90)">01:30</span></td>
-            <td>Sorting</td>
-        </tr>
-        <tr>
-            <td><span class="timestamp" onclick="jumpTo(93)">01:33</span></td>
-            <td>Searching</td>
-        </tr>
-        <tr>
-            <td><span class="timestamp" onclick="jumpTo(97)">01:37</span></td>
-            <td>Vault Filtering</td>
-        </tr>
-        <tr>
-            <td><span class="timestamp" onclick="jumpTo(99)">01:39</span></td>
-            <td>Auto-Lock</td>
-        </tr>
-        <tr>
-            <td><span class="timestamp" onclick="jumpTo(108)">01:48</span></td>
-            <td>Settings -> Log Out</td>
-        </tr>
-        <tr>
-            <td><span class="timestamp" onclick="jumpTo(121)">02:01</span></td>
-            <td>Account Login</td>
-        </tr>
-        <tr>
-            <td><span class="timestamp" onclick="jumpTo(136)">02:16</span></td>
-            <td>Change To New Password</td>
-        </tr>
-        <tr>
-            <td><span class="timestamp" onclick="jumpTo(159)">02:39</span></td>
-            <td>Re-Login using New Password</td>
-        </tr>
-        <tr>
-            <td><span class="timestamp" onclick="jumpTo(166)">02:46</span></td>
-            <td>Reset Account</td>
-        </tr>
-    </table>
-
+    <h1>Mmulti-theme demo</h1>
+    <div class="container">
+        <div class="table-wrapper">
+            <table style="margin: auto; text-align: center;">
+                <thead>
+                    <th>Time</th>
+                    <th>Description</th>
+                </thead>
+                <tr>
+                    <td><span class="timestamp" onclick="jumpTo(0)">00:00</span></td>
+                    <td>Account Creation</td>
+                </tr>
+                <tr>
+                    <td><span class="timestamp" onclick="jumpTo(16)">00:16</span></td>
+                    <td>Vault Creation</td>
+                </tr>
+                <tr>
+                    <td><span class="timestamp" onclick="jumpTo(24)">00:24</span></td>
+                    <td>Vault Update</td>
+                </tr>
+                <tr>
+                    <td><span class="timestamp" onclick="jumpTo(35)">00:35</span></td>
+                    <td>Password Creation</td>
+                </tr>
+                <tr>
+                    <td><span class="timestamp" onclick="jumpTo(53)">00:53</span></td>
+                    <td>Edit Password</td>
+                </tr>
+                <tr>
+                    <td><span class="timestamp" onclick="jumpTo(64)">01:04</span></td>
+                    <td>View & Delete Password</td>
+                </tr>
+                <tr>
+                    <td><span class="timestamp" onclick="jumpTo(79)">01:19</span></td>
+                    <td>Delete Vault</td>
+                </tr>
+                <tr>
+                    <td><span class="timestamp" onclick="jumpTo(90)">01:30</span></td>
+                    <td>Sorting</td>
+                </tr>
+                <tr>
+                    <td><span class="timestamp" onclick="jumpTo(93)">01:33</span></td>
+                    <td>Searching</td>
+                </tr>
+                <tr>
+                    <td><span class="timestamp" onclick="jumpTo(97)">01:37</span></td>
+                    <td>Vault Filtering</td>
+                </tr>
+                <tr>
+                    <td><span class="timestamp" onclick="jumpTo(99)">01:39</span></td>
+                    <td>Auto-Lock</td>
+                </tr>
+                <tr>
+                    <td><span class="timestamp" onclick="jumpTo(108)">01:48</span></td>
+                    <td>Settings -> Log Out</td>
+                </tr>
+                <tr>
+                    <td><span class="timestamp" onclick="jumpTo(121)">02:01</span></td>
+                    <td>Account Login</td>
+                </tr>
+                <tr>
+                    <td><span class="timestamp" onclick="jumpTo(136)">02:16</span></td>
+                    <td>Change To New Password</td>
+                </tr>
+                <tr>
+                    <td><span class="timestamp" onclick="jumpTo(159)">02:39</span></td>
+                    <td>Re-Login using New Password</td>
+                </tr>
+                <tr>
+                    <td><span class="timestamp" onclick="jumpTo(166)">02:46</span></td>
+                    <td>Reset Account</td>
+                </tr>
+            </table>
+        </div>
+        <div class="video-wrapper">
+            <video id="1400pHigh" controls>
+                <source src="assets/1400pHigh.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
     <script>
         function jumpTo(seconds) {
             const video = document.getElementById("1400pHigh");
